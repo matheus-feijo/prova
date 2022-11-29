@@ -7,13 +7,11 @@ tcp.connect(dest)
 
 print('Para sair use CTRL+X\n')
 msg = input()
-
 lista = []
 
-while msg > 0:
+while msg > 0 or len(lista) < 500:
+    lista.append(msg)
     msg = int(input())
-    if (msg > 0):
-        lista.append(msg)
 
 tcp.send(lista)
 tcp.close()

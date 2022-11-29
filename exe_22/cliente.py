@@ -11,8 +11,8 @@ msg = input()
 lista = []
 
 while len(lista) < 100:
-    msg = int(input())
     lista.append(msg)
+    msg = int(input())
 
 tcp.send(lista)
 tcp.close()
